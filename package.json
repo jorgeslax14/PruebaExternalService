@@ -11,14 +11,20 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "5.1.5",
-    "@sap/cds-dk": "4.1.5",
-    "express": "^4"
+    "@sap/cds-dk": "^4.1.5",
+    "cjs": "^0.0.11",
+    "express": "^4",
+    "ports": "^1.1.0"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.96.2",
+    "@sap/ux-specification": "^1.102.5",
     "sqlite3": "^5.0.2"
   },
   "scripts": {
-    "start": "cds run"
-  }
+    "start": "cds run",
+    "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/risks"
+  ]
 }
