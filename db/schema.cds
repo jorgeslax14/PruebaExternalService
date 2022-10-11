@@ -5,6 +5,7 @@ using {managed} from '@sap/cds/common';
 
 entity Risks : managed {
    key ID : UUID @(Core.Computed : true);
+<<<<<<< HEAD
     title : String(100);
     owner : String;
     prio : String(5);
@@ -35,3 +36,25 @@ entity BusinessPartners as projection on external.A_BusinessPartner {
  }*/
 
  // // email: Association to EmailAdress;
+=======
+       title : String(100);
+       owner : String;
+       prio : String(5);
+       descr : String;
+       miti : Association to Mitigations;
+       impact : Integer;
+       //bp : Association to BusinessPartners;
+       criticality : Integer;
+}
+ 
+entity Mitigations : managed {
+  key ID : UUID @(Core.Computed : true);
+      descr : String;
+      owner : String;
+      timeline : String;
+      risks : Association to many Risks
+               on risks.miti = $self;
+}
+
+
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0

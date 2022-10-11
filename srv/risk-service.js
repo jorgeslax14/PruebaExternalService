@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
 // Imports
 const cds = require("@sap/cds");
 
 /**
+<<<<<<< HEAD
   * The service implementation with all service handlers
   */
 module.exports = cds.service.impl(async function () {
@@ -116,4 +120,26 @@ try {
  } catch (error) {}
 });
 //### END OF INSERT
+=======
+   * The service implementation with all service handlers
+   */
+module.exports = cds.service.impl(async function () {
+   // Define constants for the Risk and BusinessPartners entities from the risk-service.cds file
+   const { Risks, BusinessPartners } = this.entities; 
+
+   /**
+   * Set criticality after a READ operation on /risks
+   */
+    this.after("READ", Risks, (data) => {
+       const risks = Array.isArray(data) ? data : [data];
+
+       risks.forEach((risk) => {
+         if (risk.impact >= 100000) {
+           risk.criticality = 1;
+         } else { 
+           risk.criticality = 2;
+         }
+      });
+   });
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
 });

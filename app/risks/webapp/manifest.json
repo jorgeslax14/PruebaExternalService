@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "_version": "1.42.0",
+=======
+  "_version": "1.40.0",
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
   "sap.app": {
     "id": "riskmanagement.risks",
     "type": "application",
@@ -12,8 +16,13 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
+<<<<<<< HEAD
       "version": "1.7.4",
       "toolsId": "19a50182-a1fe-4993-a116-41c9e6502630"
+=======
+      "version": "1.7.3",
+      "toolsId": "9a4d349f-2352-4b2f-8e0f-82ac4080880a"
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
     },
     "dataSources": {
       "mainService": {

@@ -20,10 +20,13 @@ using RiskService from '../../srv/risk-service';
        {Value : title},
        {Value : miti_ID},
        {Value : owner},
+<<<<<<< HEAD
         //### BEGIN OF INSERT
        {Value : bp_BusinessPartner},
         //### END OF INSERT    
        //{Value : email_AddressID },   
+=======
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
        { 
           Value : prio,
           Criticality : criticality
@@ -44,10 +47,13 @@ using RiskService from '../../srv/risk-service';
      FieldGroup #Main : {Data : [
        {Value : miti_ID},
        {Value : owner},
+<<<<<<< HEAD
         //### BEGIN OF INSERT
         {Value : bp_BusinessPartner},
         //### END OF INSERT 
         //{Value : email_AddressID },       
+=======
+>>>>>>> 57140df68f2397af30edf81a3bc05f2726640fc0
        {
            Value : prio,
            Criticality : criticality
